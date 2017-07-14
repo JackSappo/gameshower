@@ -6,36 +6,6 @@ const auth = function (req, res, next) {
   res.send('')
 };
 
-/* Playground
-
-//WORKS GIVEN PLACEMENT ABOVE
-app.get('/supper1', function (req, res) {
-  res.send('Sup B1');
-});
-
-// DIRECTS ANY REQUESTS TO CLIENT FOLDER
-// app.use('/', express.static('client'))
-
-// SAME AS ABOVE
-app.get('/', express.static('client'))
-
-//WORKS GIVEN PLACEMENT BELOW
-app.get('/supper2', function (req, res) {
-  res.send('Sup B2');
-});
-
-//WORKS
-app.get('/shower', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/index.html'))
-});
-
-//WORKS
-app.get('/shower', function (req, res) {
-  res.sendFile(__dirname + '/client/index.html')
-});
-
-*/
-
 app.use(express.static('client'));
 
 app.get('/door', function (req, res) {
